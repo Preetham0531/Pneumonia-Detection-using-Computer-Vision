@@ -1,0 +1,233 @@
+/* Global reset */
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.title{
+    position: absolute;
+    top: 0;
+}
+
+body {
+    background: #121212; /* Dark background */
+    color: #E0E0E0; /* Light gray text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative; /* Necessary for absolutely positioned floating balls */
+    overflow: hidden; /* Prevent scrolling from floating balls */
+}
+
+/* Floating balls animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) translateX(50px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Main container */
+.container {
+    background: #1F1F1F; /* Dark background for content */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.4); /* Soft blue glow */
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 1; /* Keep the content above the floating balls */
+}
+
+/* Header */
+h2 {
+    font-size: 2.8rem;
+    color: #4A90E2; /* Elegant blue color for header */
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #B0B0B0; /* Light gray text for paragraph */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* File input */
+input[type="file"] {
+    padding: 15px;
+    border: 2px solid #4A90E2;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #56CCF2;
+    box-shadow: 0 0 15px rgba(86, 204, 242, 0.6);
+}
+
+/* Submit button */
+button {
+    padding: 15px 30px;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+}
+
+button:hover {
+    background-color: #56CCF2;
+    box-shadow: 0 0 15px rgba(86, 204, 242, 0.6);
+}
+
+/* Prediction result box */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #2C2C2C;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+}
+
+.result h3 {
+    font-size: 1.6rem;
+    color: #4A90E2;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+.result p {
+    font-size: 1.4rem;
+    color: #E0E0E0;
+    text-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* Floating balls on the background */
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #4A90E2; /* Elegant blue color */
+    opacity: 0;
+    animation: float 10s ease-in-out infinite;
+}
+
+.ball:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+}
+
+.ball:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    top: 25%;
+    left: 50%;
+    animation-duration: 14s;
+}
+
+.ball:nth-child(3) {
+    width: 35px;
+    height: 35px;
+    top: 40%;
+    left: 70%;
+    animation-duration: 16s;
+}
+
+.ball:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    left: 80%;
+    animation-duration: 18s;
+}
+
+.ball:nth-child(5) {
+    width: 25px;
+    height: 25px;
+    top: 80%;
+    left: 10%;
+    animation-duration: 20s;
+}
+
+.ball:nth-child(6) {
+    width: 45px;
+    height: 45px;
+    top: 30%;
+    left: 90%;
+    animation-duration: 22s;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #2C2C2C;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+    display: none; /* Start with hidden state */
+}
+
+/* Global reset */
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #121212; /* Dark background */
+    color: #E0E0E0; /* Light gray text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column; /* Stack the content vertically */
+}
+
+.container {
+    background: #1F1F1F;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 1;
+}
